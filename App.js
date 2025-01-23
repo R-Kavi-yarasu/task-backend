@@ -10,13 +10,9 @@ const task_api = require('./API/TaskAPI')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(cors(
-  {
-    origin: "http://localhost:3000"
-  }
-));
+app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/TaskMangement')
+mongoose.connect('mongodb+srv://rkaviyarasu0:root@cluster0.g3a5j.mongodb.net/TaskMangement')
   .then(() => {
     console.log('connected');
   })
